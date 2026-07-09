@@ -1,0 +1,96 @@
+/* ======================================================
+   COLORS
+====================================================== */
+
+:root {
+
+  /* Primary Colors */
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #dbeafe;
+
+  /* Secondary Colors */
+  --secondary-color: #7c3aed;
+  --secondary-light: #ede9fe;
+
+  /* Success */
+  --success-color: #16a34a;
+  --success-light: #dcfce7;
+
+  /* Danger */
+  --danger-color: #dc2626;
+  --danger-light: #fee2e2;
+
+  /* Warning */
+  --warning-color: #f59e0b;
+  --warning-light: #fef3c7;
+
+  /* Info */
+  --info-color: #0ea5e9;
+  --info-light: #e0f2fe;
+
+  /* Background */
+  --background-color: #f8fafc;
+  --card-background: #ffffff;
+
+  /* Text */
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --text-white: #ffffff;
+
+  /* Borders */
+  --border-color: #e5e7eb;
+
+  /* Shadow */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.05);
+  --shadow-md: 0 5px 15px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 30px rgba(0,0,0,.12);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-round: 50%;
+
+  /* Font */
+  --font-family: "Poppins", sans-serif;
+
+  /* Font Sizes */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 20px;
+  --font-xl: 28px;
+  --font-xxl: 36px;
+
+  /* Font Weight */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* Transition */
+  --transition-fast: .2s ease;
+  --transition-normal: .3s ease;
+  --transition-slow: .5s ease;
+
+  /* Navbar */
+  --navbar-height: 70px;
+
+  /* Sidebar */
+  --sidebar-width: 260px;
+
+  /* Container */
+  --container-width: 1200px;
+
+}

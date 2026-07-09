@@ -1,0 +1,336 @@
+/* ======================================================
+   REPORT PAGE
+====================================================== */
+
+.reports-page {
+  padding: 25px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* ======================================================
+   REPORT HEADER
+====================================================== */
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.report-header h1 {
+  font-size: 32px;
+  color: #1f2937;
+}
+
+.report-header p {
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+/* ======================================================
+   REPORT CARD
+====================================================== */
+
+.report-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.report-card-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+/* ======================================================
+   SUMMARY REPORT
+====================================================== */
+
+.summary-report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.summary-report-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  transition: .3s;
+}
+
+.summary-report-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.summary-report-item h4 {
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.summary-report-item h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.summary-report-item .income {
+  color: #16a34a;
+}
+
+.summary-report-item .expense {
+  color: #dc2626;
+}
+
+.summary-report-item .balance-positive {
+  color: #16a34a;
+}
+
+.summary-report-item .balance-negative {
+  color: #dc2626;
+}
+
+/* ======================================================
+   CHARTS
+====================================================== */
+
+.chart-container {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  height: 420px;
+}
+
+.chart-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* ======================================================
+   MONTHLY REPORT
+====================================================== */
+
+.monthly-report {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.month-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.month-name {
+  font-weight: 600;
+}
+
+.month-income {
+  color: #16a34a;
+}
+
+.month-expense {
+  color: #dc2626;
+}
+
+/* ======================================================
+   EXPORT BUTTONS
+====================================================== */
+
+.export-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.export-buttons button {
+  min-width: 160px;
+}
+
+/* ======================================================
+   REPORT TABLE
+====================================================== */
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.report-table th {
+  background: #f1f5f9;
+  padding: 15px;
+  text-align: left;
+}
+
+.report-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.report-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ======================================================
+   EMPTY REPORT
+====================================================== */
+
+.report-empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.report-empty h3 {
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.report-empty p {
+  color: #6b7280;
+}
+
+/* ======================================================
+   LOADER
+====================================================== */
+
+.report-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  color: #2563eb;
+  font-size: 18px;
+}
+
+/* ======================================================
+   ANIMATION
+====================================================== */
+
+.report-card,
+.chart-container,
+.summary-report-item {
+  animation: fadeUp .4s ease;
+}
+
+@keyframes fadeUp {
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width:992px){
+
+.summary-report-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.chart-container{
+
+height:350px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.reports-page{
+
+padding:15px;
+
+}
+
+.report-header{
+
+flex-direction:column;
+align-items:flex-start;
+
+}
+
+.summary-report-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.export-buttons{
+
+flex-direction:column;
+
+}
+
+.export-buttons button{
+
+width:100%;
+
+}
+
+.month-row{
+
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+
+}
+
+.chart-container{
+
+height:300px;
+
+}
+
+}
+
+@media (max-width:576px){
+
+.report-card{
+
+padding:18px;
+
+}
+
+.report-header h1{
+
+font-size:26px;
+
+}
+
+.chart-title{
+
+font-size:18px;
+
+}
+
+}

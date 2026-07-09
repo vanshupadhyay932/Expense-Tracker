@@ -1,0 +1,1244 @@
+/* ======================================================
+   MAIN LAYOUT
+====================================================== */
+
+.main-layout{
+    display:flex;
+    min-height:100vh;
+    background:#f5f7fb;
+}
+
+/* ======================================================
+   SIDEBAR
+====================================================== */
+
+.sidebar{
+    width:260px;
+    background:#1e293b;
+    color:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    padding:25px 20px;
+}
+
+.sidebar-logo{
+    margin-bottom:30px;
+}
+
+.sidebar-logo h2{
+    font-size:28px;
+    color:white;
+}
+
+.sidebar-menu{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:10px;
+}
+.sidebar-link{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px 18px;
+    border-radius:10px;
+    color:#cbd5e1;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.sidebar-link:hover{
+    background:#334155;
+    color:white;
+}
+
+.sidebar-link.active{
+    background:#2563eb;
+    color:white;
+}
+
+.sidebar-icon{
+    font-size:20px;
+}
+
+.sidebar-footer{
+    margin-top:auto;
+}
+.logout-button{
+    width:100%;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    background:#ef4444;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.logout-button:hover{
+    background:#dc2626;
+}
+
+/* ======================================================
+   MAIN CONTENT
+====================================================== */
+
+.main-content{
+    flex:1;
+    margin-left:260px;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+.page-content{
+    flex:1;
+    padding:30px;
+}
+
+/* ======================================================
+   NAVBAR
+====================================================== */
+
+.navbar{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 30px;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar-left h2{
+    font-size:28px;
+    color:#2563eb;
+}
+
+.navbar-left p{
+    color:#64748b;
+    margin-top:5px;
+}
+
+.navbar-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.notification-btn,
+.theme-btn{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#eef2ff;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.user-profile{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.user-avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.user-details{
+    display:flex;
+    flex-direction:column;
+}
+
+.user-details span{
+    font-weight:600;
+}
+
+.user-details small{
+    color:#64748b;
+}
+
+.logout-btn{
+    border:none;
+    background:#ef4444;
+    color:white;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.logout-btn:hover{
+    background:#dc2626;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media(max-width:900px){
+
+.sidebar{
+    transform:translateX(-100%);
+}
+
+.main-content{
+    margin-left:0;
+}
+
+.navbar{
+    padding:15px;
+}
+
+.page-content{
+    padding:20px;
+}
+
+}/* ======================================================
+   DASHBOARD LAYOUT
+====================================================== */
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px;
+  background: #f5f7fb;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ======================================================
+   DASHBOARD HEADER
+====================================================== */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(0,0,0,.08);
+}
+
+.dashboard-header-left h1 {
+  font-size: 30px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.dashboard-header-left p {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.dashboard-header-right {
+  text-align: right;
+}
+
+.dashboard-header-right span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.dashboard-header-right h2 {
+  margin-top: 8px;
+  color: #2563eb;
+  font-size: 32px;
+}
+
+/* ======================================================
+   DASHBOARD STATS GRID
+====================================================== */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(260px,1fr)
+  );
+  gap: 20px;
+}
+
+/* ======================================================
+   COMMON CARD
+====================================================== */
+
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 22px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.card-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.card-value {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.card-footer {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ======================================================
+   SUMMARY CARD
+====================================================== */
+
+.summary-card {
+  background: white;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+}
+
+.summary-card h3 {
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.summary-card h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* ======================================================
+   GRID SECTION
+====================================================== */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.dashboard-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ======================================================
+   SECTION TITLES
+====================================================== */
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 18px;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width:992px){
+
+.dashboard-grid{
+grid-template-columns:1fr;
+}
+
+.dashboard-header{
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
+}
+
+.dashboard-header-right{
+text-align:left;
+}
+
+}
+
+@media (max-width:768px){
+
+.dashboard{
+padding:15px;
+}
+
+.dashboard-stats{
+grid-template-columns:1fr;
+}
+
+.dashboard-header-left h1{
+font-size:24px;
+}
+
+.card-value{
+font-size:24px;
+}
+
+}
+/* ======================================================
+   BALANCE CARD
+====================================================== */
+
+.balance-card {
+  border-left: 6px solid #2563eb;
+}
+
+.balance-card .card-icon {
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+}
+
+.balance-card .card-value {
+  color: #2563eb;
+}
+
+.balance-status {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.balance-status.positive {
+  color: #16a34a;
+}
+
+.balance-status.negative {
+  color: #dc2626;
+}
+
+/* ======================================================
+   INCOME CARD
+====================================================== */
+
+.income-card {
+  border-left: 6px solid #16a34a;
+}
+
+.income-card .card-icon {
+  background: rgba(22, 163, 74, 0.12);
+  color: #16a34a;
+}
+
+.income-card .card-value {
+  color: #16a34a;
+}
+
+.income-card:hover {
+  box-shadow: 0 10px 30px rgba(22,163,74,.18);
+}
+
+/* ======================================================
+   EXPENSE CARD
+====================================================== */
+
+.expense-card {
+  border-left: 6px solid #dc2626;
+}
+
+.expense-card .card-icon {
+  background: rgba(220,38,38,.12);
+  color: #dc2626;
+}
+
+.expense-card .card-value {
+  color: #dc2626;
+}
+
+.expense-card:hover {
+  box-shadow: 0 10px 30px rgba(220,38,38,.18);
+}
+
+/* ======================================================
+   CATEGORY CARD
+====================================================== */
+
+.category-card {
+  border-left: 6px solid #7c3aed;
+}
+
+.category-card .card-icon {
+  background: rgba(124,58,237,.12);
+  color: #7c3aed;
+}
+
+.category-card .card-value {
+  color: #7c3aed;
+}
+
+.category-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.category-amount {
+  margin-top: 10px;
+  font-size: 26px;
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.category-card:hover {
+  box-shadow: 0 10px 30px rgba(124,58,237,.18);
+}
+
+/* ======================================================
+   MONTHLY CARD
+====================================================== */
+
+.monthly-card {
+  border-left: 6px solid #f59e0b;
+}
+
+.monthly-card .card-icon {
+  background: rgba(245,158,11,.15);
+  color: #f59e0b;
+}
+
+.monthly-card .card-value {
+  color: #f59e0b;
+}
+
+.monthly-income,
+.monthly-expense {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.monthly-income span:last-child {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.monthly-expense span:last-child {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.monthly-card:hover {
+  box-shadow: 0 10px 30px rgba(245,158,11,.20);
+}
+
+/* ======================================================
+   CARD ANIMATION
+====================================================== */
+
+.balance-card,
+.income-card,
+.expense-card,
+.category-card,
+.monthly-card {
+  transition: all .35s ease;
+}
+
+.balance-card:hover,
+.income-card:hover,
+.expense-card:hover,
+.category-card:hover,
+.monthly-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ======================================================
+   DASHBOARD ICONS
+====================================================== */
+
+.dashboard-card .card-icon {
+  transition: .3s;
+}
+
+.dashboard-card:hover .card-icon {
+  transform: rotate(8deg) scale(1.08);
+}
+
+/* ======================================================
+   VALUE ANIMATION
+====================================================== */
+
+.card-value {
+  transition: .3s;
+}
+
+.dashboard-card:hover .card-value {
+  letter-spacing: 1px;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width:768px){
+
+.balance-card,
+.income-card,
+.expense-card,
+.category-card,
+.monthly-card{
+
+padding:18px;
+
+}
+
+.card-icon{
+
+width:50px;
+height:50px;
+font-size:22px;
+
+}
+
+.card-value{
+
+font-size:24px;
+
+}
+
+}
+/* ======================================================
+   RECENT TRANSACTIONS
+====================================================== */
+
+.recent-transactions {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.recent-transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.recent-transactions-header h2 {
+  font-size: 22px;
+  color: #1f2937;
+}
+
+.view-all-btn {
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-all-btn:hover {
+  text-decoration: underline;
+}
+
+/* ======================================================
+   TRANSACTION TABLE
+====================================================== */
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-table thead {
+  background: #f8fafc;
+}
+
+.transaction-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.transaction-table td {
+  padding: 18px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 15px;
+}
+
+.transaction-table tbody tr {
+  transition: .25s;
+}
+
+.transaction-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+/* ======================================================
+   TRANSACTION TYPE BADGE
+====================================================== */
+
+.transaction-type {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 6px 12px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.transaction-type.income {
+  background: rgba(22,163,74,.12);
+  color: #16a34a;
+}
+
+.transaction-type.expense {
+  background: rgba(220,38,38,.12);
+  color: #dc2626;
+}
+
+/* ======================================================
+   TRANSACTION AMOUNT
+====================================================== */
+
+.amount-income {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.amount-expense {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* ======================================================
+   CATEGORY BADGE
+====================================================== */
+
+.category-badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* ======================================================
+   ACTION BUTTONS
+====================================================== */
+
+.table-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: .3s;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+/* ======================================================
+   EMPTY STATE
+====================================================== */
+
+.empty-transactions {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-transactions h3 {
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.empty-transactions p {
+  color: #6b7280;
+}
+
+/* ======================================================
+   LOADING STATE
+====================================================== */
+
+.transaction-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.transaction-loading span {
+  color: #2563eb;
+  font-size: 18px;
+}
+
+/* ======================================================
+   TABLE SCROLL
+====================================================== */
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+/* ======================================================
+   HOVER EFFECTS
+====================================================== */
+
+.transaction-table tbody tr:hover .edit-btn {
+  transform: scale(1.05);
+}
+
+.transaction-table tbody tr:hover .delete-btn {
+  transform: scale(1.05);
+}
+
+/* ======================================================
+   RESPONSIVE TABLE
+====================================================== */
+
+@media (max-width:992px){
+
+.transaction-table{
+min-width:850px;
+}
+
+.table-wrapper{
+overflow-x:auto;
+}
+
+}
+
+@media (max-width:768px){
+
+.recent-transactions{
+
+padding:18px;
+
+}
+
+.recent-transactions-header{
+
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+
+}
+
+.table-actions{
+
+flex-direction:column;
+
+}
+
+.edit-btn,
+.delete-btn{
+
+width:100%;
+
+}
+
+}
+/* ======================================================
+   REPORT CARDS
+====================================================== */
+
+.report-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+  margin-bottom: 25px;
+}
+
+.report-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.report-card-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.report-card-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ======================================================
+   SUMMARY REPORT
+====================================================== */
+
+.summary-report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.summary-report-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  transition: .3s;
+}
+
+.summary-report-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.summary-report-item h4 {
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.summary-report-item h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ======================================================
+   CHART SECTION
+====================================================== */
+
+.chart-container {
+  width: 100%;
+  height: 400px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/* ======================================================
+   MONTHLY REPORT
+====================================================== */
+
+.monthly-report {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.month-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.month-name {
+  font-weight: 600;
+}
+
+.month-income {
+  color: #16a34a;
+}
+
+.month-expense {
+  color: #dc2626;
+}
+
+/* ======================================================
+   EXPORT BUTTONS
+====================================================== */
+
+.export-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* ======================================================
+   PAGE ANIMATION
+====================================================== */
+
+.fade-in {
+  animation: fadeIn .5s ease;
+}
+
+@keyframes fadeIn {
+
+from{
+
+opacity:0;
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ======================================================
+   CARD ANIMATION
+====================================================== */
+
+.dashboard-card,
+.report-card,
+.summary-card {
+
+animation:slideUp .45s ease;
+
+}
+
+@keyframes slideUp {
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ======================================================
+   BUTTON HOVER EFFECT
+====================================================== */
+
+button {
+  transition: .3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* ======================================================
+   CUSTOM SCROLLBAR
+====================================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf2f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}
+
+/* ======================================================
+   PRINT MODE
+====================================================== */
+
+@media print {
+
+.sidebar,
+.navbar,
+.footer,
+button{
+
+display:none;
+
+}
+
+.dashboard{
+
+padding:0;
+
+}
+
+.dashboard-card,
+.report-card{
+
+box-shadow:none;
+border:1px solid #ddd;
+
+}
+
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width:992px){
+
+.chart-container{
+
+height:320px;
+
+}
+
+.summary-report-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.summary-report-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.month-row{
+
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+
+}
+
+.export-buttons{
+
+flex-direction:column;
+
+}
+
+.export-buttons button{
+
+width:100%;
+
+}
+
+.chart-container{
+
+height:280px;
+
+}
+
+}
+
+@media (max-width:576px){
+
+.dashboard{
+
+padding:15px;
+
+}
+
+.report-card{
+
+padding:18px;
+
+}
+
+.chart-title{
+
+font-size:18px;
+
+}
+
+.summary-report-item h2{
+
+font-size:22px;
+
+}
+
+}
